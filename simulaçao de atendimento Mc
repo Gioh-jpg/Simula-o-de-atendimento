@@ -1,0 +1,40 @@
+import java.util.Scanner; //Giovana gomes da silva
+public class Main {
+    
+	public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+        String continuar;
+        do{
+        System.out.print("Bem vindo ao McDonalds! Como podemos te chamar?");
+        String nome = scanner.nextLine();
+        
+        System.out.println("Escolha uma opção do nosso delicioso menu:");
+        System.out.println("1 - Big mac");
+        System.out.println("2 - Milkshake");
+        System.out.println("3 - nuggets");
+
+        System.out.print("Digite o número da opção:");
+        int escolha = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        System.out.println("Obrigada pela preferencia! por favor,avalie sua satisfação com nosso atendimento");
+        
+        System.out.print("Digite a sua nota (de 0 a 5)");
+        int Nota = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        if (Nota==5) { 
+        System.out.println("Obrigada pela avaliação,Estamos felizes que você teve uma boa experiencia!");
+        } else {
+            System.out.println("Obrigada pela avaliação,Estamos em constante evolução para melhorar sua experiencia!");
+        }
+        System.out.print("Deseja fazer um novo pedido? (sim/não)");
+        continuar = scanner.nextLine();
+        
+    } while (continuar.equalsIgnoreCase("sim"));
+
+        scanner.close();
+		}
+	}
